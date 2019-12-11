@@ -1,0 +1,16 @@
+.book {
+    border: 1px solid #e9d5d5;
+    width: 20%;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+}
+
+#slide1 {
+  background-color: red;
+}
+
+#slide2 {
+  background-color: green;
+  display: none;
+}

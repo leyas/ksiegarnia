@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>księgarnia.pl</h1>
+  </header>
+  <section>
+    <div id="filtr">
+      <form>
+        <label>Tytuł</label>
+        <input type="text" name="title"/>
+
+        <label>Autor</label>
+        <input type="text" name="author"/>
+
+        <label>Cena od</label>
+        <input type="number" name="priceFrom"/>
+
+        <label>Cena do</label>
+        <input type="number" name="priceTo"/>
+
+        <button type="submit">filtruj</button>
+      </form>
+    </div>
+    <div id="slider">
+      <div id="slides">
+        <!-- slide1 -->
+        <div id="slide1" class="slide">
+          <div class="firstRow">
+            <div class="book">
+              <img src="images/becoming_moja_historia.jpg" />
+              <h2>Becoming. Moja historiaTytuł książki</h2>
+              <h3>Michelle Obama</h3>
+              <h3>25.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/krotka_historia_czasu.jpg" />
+              <h2>Krotka historia czasu</h2>
+              <h3>Stephen Hawking</h3>
+              <h3>28.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/ostatnie_historie.jpg" />
+              <h2>Ostatnie historie</h2>
+              <h3>Olga Tokarczuk</h3>
+              <h3>45.20</h3>
+            </div>
+            <div class="book">
+              <img src="images/wyspy_historia.jpg" />
+              <h2>Wyspy. Historia</h2>
+              <h3>Norman Davies</h3>
+              <h3>47.50</h3>
+            </div>
+          </div>
+          <div class="secondRow">
+            <div class="book">
+              <img src="images/becoming_moja_historia.jpg" />
+              <h2>Becoming. Moja historiaTytuł książki</h2>
+              <h3>Michelle Obama</h3>
+              <h3>25.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/krotka_historia_czasu.jpg" />
+              <h2>Krotka historia czasu</h2>
+              <h3>Stephen Hawking</h3>
+              <h3>28.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/ostatnie_historie.jpg" />
+              <h2>Ostatnie historie</h2>
+              <h3>Olga Tokarczuk</h3>
+              <h3>45.20</h3>
+            </div>
+            <div class="book">
+              <img src="images/wyspy_historia.jpg" />
+              <h2>Wyspy. Historia</h2>
+              <h3>Norman Davies</h3>
+              <h3>47.50</h3>
+            </div>
+          </div>
+        </div>
+        <!-- slide 2 --->
+        <div id="slide2" class="slide">
+          <div class="firstRow">
+            <div class="book">
+              <img src="images/becoming_moja_historia.jpg" />
+              <h2>Becoming. Moja historiaTytuł książki</h2>
+              <h3>Michelle Obama</h3>
+              <h3>25.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/krotka_historia_czasu.jpg" />
+              <h2>Krotka historia czasu</h2>
+              <h3>Stephen Hawking</h3>
+              <h3>28.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/ostatnie_historie.jpg" />
+              <h2>Ostatnie historie</h2>
+              <h3>Olga Tokarczuk</h3>
+              <h3>45.20</h3>
+            </div>
+            <div class="book">
+              <img src="images/wyspy_historia.jpg" />
+              <h2>Wyspy. Historia</h2>
+              <h3>Norman Davies</h3>
+              <h3>47.50</h3>
+            </div>
+          </div>
+          <div class="secondRow">
+            <div class="book">
+              <img src="images/becoming_moja_historia.jpg" />
+              <h2>Becoming. Moja historiaTytuł książki</h2>
+              <h3>Michelle Obama</h3>
+              <h3>25.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/krotka_historia_czasu.jpg" />
+              <h2>Krotka historia czasu</h2>
+              <h3>Stephen Hawking</h3>
+              <h3>28.00</h3>
+            </div>
+            <div class="book">
+              <img src="images/ostatnie_historie.jpg" />
+              <h2>Ostatnie historie</h2>
+              <h3>Olga Tokarczuk</h3>
+              <h3>45.20</h3>
+            </div>
+            <div class="book">
+              <img src="images/wyspy_historia.jpg" />
+              <h2>Wyspy. Historia</h2>
+              <h3>Norman Davies</h3>
+              <h3>47.50</h3>
+            </div>
+          </div>
+        </div>
+        <!--- koljne slajdy --->
+      </div>
+      <div id="navigation">
+        <button id="slidePrev" onclick="displayPrev()">poprzedni</button>
+        <button id="slideNext" onclick="displayNext()">następny</button>
+      </div>
+    </div>
+  </section>
+  <footer>Stopka</footer>
+</body>
+</html>
