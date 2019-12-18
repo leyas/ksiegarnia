@@ -19,13 +19,20 @@ h1 {
     padding: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 #slide1 {
   background-color: #8bbabb;
 }
 
 #slide2 {
   background-color: #6c7b95;
-  display: none;
 }
 #slide3 {
   background-color: #8bbabb;
