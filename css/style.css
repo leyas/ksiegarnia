@@ -1,3 +1,16 @@
+body {
+  background-color: #c7f0db;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+#filtr {
+  margin: 2%;
+  padding: 10px;
+}
+
+
 .book {
     border: 1px solid #e9d5d5;
     width: 20%;
@@ -7,10 +20,16 @@
 }
 
 #slide1 {
-  background-color: red;
+  background-color: #8bbabb;
 }
 
 #slide2 {
-  background-color: green;
+  background-color: #6c7b95;
   display: none;
+}
+#slide3 {
+  background-color: #8bbabb;
+}
+#slide4 {
+  background-color: #6c7b95;
 }
