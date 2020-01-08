@@ -1,40 +1,83 @@
 function displayPrev() {
+    var actualNumber = getActualSlideNumber();
+    var actualSlide = getActualSlide();
+    var prevNumber = getPrevSlideNumber(actualNumber);
+    var prevSlide = getSlideByNumber(prevNumber);
 
+    if (prevSlide == null) {
+      prevSlide = getLastSlide();
+    }
 
-
-
-  // console.log("Wywołałem funkcję displayPrev")
-  // var slide1 = document.getElementById("slide1");
-  // var sadfasdfasdf = document.getElementById("slide2");
-  //
-  // slide1.style.display = "block";
-  // sadfasdfasdf.style.display = "none";
+    change(actualSlide, prevSlide);
 }
 
 function displayNext() {
-  // który jest obecnym blokiem ?
-  var actualTable = document.getElementsByClassName("visible");
-  var actual = actualTable[0];
+  var actualNumber = getActualSlideNumber();
+  var actualSlide = getActualSlide();
+  var nextNumber = getNextSlideNumber(actualNumber);
+  var nextSlide = getSlideByNumber(nextNumber);
 
-  console.log(actual);
+  if (nextSlide == null) {
+    nextSlide = getFirstSlide();
+  }
 
-  // na podstawie obecnego oblicz kto jest kolejny // slide1 -> slide2
-  var actualId = actual.id;
+  change(actualSlide, nextSlide);
+}
 
-  // var next = actual.id;
+function getFirstSlide(){
+  return document.getElementById("slide1");
+}
 
-  console.log(number);
+function change(oldSlide, newSlide){
+  oldSlide.classList.remove("visible");
+  oldSlide.classList.add("hidden");
 
-  // ukryj obecny // dodaj klase hidden
-  //
-  // odkryj nastepny // usuń klasę hidden
+  newSlide.classList.remove("hidden");
+  newSlide.classList.add("visible");
+}
 
-  // var slide1 = document.getElementById("slide1");
-  // var slide2 = document.getElementById("slide2");
-  //
-  // slide1.style.display = "none";
-  // slide2.style.display = "block";
-  // slide2.style.backgroundColor = "yellow";
+function getActualSlideNumber(){
+  var actual = getActualSlide();
+  return getSlideNumber(actual.id);
+}
 
+function getActualSlide(){
+  var visibleSlides = document.getElementsByClassName("visible");
+  var actual = visibleSlides[0];
 
+  return actual;
+}
+
+function getSlideNumber(id){
+  var number = id.replace("slide", "");
+  return number;
+}
+
+function getNextSlideNumber(actualNumber){
+  var nextNumber = Number(actualNumber)+1;  // "1" => 1
+  console.log("Następne id = "+nextNumber);
+
+  return nextNumber;
+}
+
+function getPrevSlideNumber(actualNumber){
+  var prevNumber = Number(actualNumber)-1;  // "1" => 1
+  console.log("Poprzednie id = "+prevNumber);
+
+  return prevNumber;
+}
+
+function getSlideByNumber(number){
+  return document.getElementById("slide"+number);
+}
+
+function getLastSlide(){
+  // ostatni slide
+  var slides = document.getElementsByClassName("slide");
+  var lastIndex = slides.length-1;
+  console.log("Ostatni index: "+lastIndex);
+  var lastSlide = slides[lastIndex];
+  // slide1, slide2   =>   slide2
+  // slide1, slide2, slide3, slide4   =>   slide4
+  return lastSlide;
 }
