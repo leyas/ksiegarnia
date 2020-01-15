@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function(){
+  wygenerujPrzyciski();
+});
+
+
+function wygenerujPrzyciski(){
+  var slides = document.getElementsByClassName("slide");
+  var count = slides.length;
+
+  for(var i = 1; i <= count; i++){
+    document.getElementById("slideButtons").innerHTML += "<button onclick=\"displayById("+i+")\"> <img src=\"images/notebook.png\"/>   </button>";
+  }
+
+}
+
+function displayById(id){
+  var aktualny = getActualSlide();
+  var docelowy =  getSlideByNumber(id);
+
+  change(aktualny, docelowy)
+}
+
 function displayPrev() {
     var actualNumber = getActualSlideNumber();
     var actualSlide = getActualSlide();

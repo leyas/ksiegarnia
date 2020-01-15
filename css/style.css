@@ -40,3 +40,7 @@ h1 {
 #slide4 {
   background-color: #6c7b95;
 }
+
+#navigation button {
+  cursor: pointer;
+}
